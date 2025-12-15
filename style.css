@@ -108,7 +108,7 @@ header p {
 
 /* --- Portfolio Grid --- */
 #portfolio {
-    padding: 100px 5%;
+    padding: 40px 5% 100px; /* mniejszy odstęp od góry */
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -266,4 +266,5 @@ footer {
     opacity: 0;
     visibility: hidden;
 }
+
 /* ========================================================= */
