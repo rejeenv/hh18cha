@@ -8,11 +8,10 @@
 /* === PŁYNNE PRZEWIJANIE i STANDARDOWY KURSOR === */
 html {
     scroll-behavior: smooth;
-    /* Domyślny kursor systemowy jest przywrócony */
     cursor: default; 
 }
-/* ========================================================= */
 
+/* ========================================================= */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0a0a0a; 
@@ -148,7 +147,7 @@ h2 {
     padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
-    cursor: pointer; /* Zmienia kursor na "rękę" nad linkiem */
+    cursor: pointer; 
     border-radius: 4px;
     transition: transform 0.2s;
 }
@@ -186,7 +185,6 @@ h2 {
     background: rgba(0, 0, 0, 0.7); 
 }
 /* === KONIEC STYLÓW DLA MINIATUR === */
-
 
 /* --- Stopka --- */
 footer {
@@ -266,5 +264,3 @@ footer {
     opacity: 0;
     visibility: hidden;
 }
-
-/* ========================================================= */
