@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rejeen.xyz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="toast-message" class="toast-hidden">Skopiowano do schowka!</div>
+
+    <nav>
+        <div class="logo">rejeen.xyz</div>
+        <ul>
+            <li><a href="#home">Main</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="accent">rejeen</span>.</h1>
+            <p>Im making hvh edits.</p>
+            <a href="#portfolio" class="btn">Projects</a>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <h2>My projects</h2>
+        <p class="subtitle">Click thumbnail to watch at YouTube</p>
+        
+        <div class="video-grid" id="video-gallery"></div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact me</h2>
+        
+        <div class="socials">
+            <a href="https://discord.gg/HyvZ3jX3PC" target="_blank">Discord</a>
+        </div>
+        <p class="copyright">&copy; 2025 rejeen</p>
+    </footer>
+
+    <script>
+        
+        // === SEKCJA GENEROWANIA FILMÓW ===
+        const videos = [
+            { id: 'vYbc4XD1Zps', title: 'Neverlose Demolishing #cs2 HvH Community' },
+            { id: 'NhHkkxZkWkY', title: 'Back on track | HvH Highlights #5' },
+            { id: 'wejm8BUzBxo', title: 'Neverlose #cs2 HvH Destruction' },
+            { id: 'Ku_SLdXc2ns', title: 'Neverlose destroying #cs2 HvH Community' },
+            { id: 'AYIDxJBtYv8', title: '#cs2 Premier HvH with MemeSense' },
+            { id: 'dyIBWCU4CEs', title: '#cs2 Neverlose UPDATE is Dominating HvH' },
+            { id: 'AElZxnmgj3U', title: 'Haunted by PLAGUE' },
+            { id: '-TDWMm9SW9c', title: 'Levitating with Plague' },
+            { id: 'IEJYiDnc73g', title: 'Plague meets TOP GEAR?!' },
+            { id: '46wpzF3ESf8', title: 'Plague is simply the BEST' },
+            { id: 'Sbt2BNnvyqU', title: 'Plague destroying every lobby' },
+
+            
+            // Dodawaj swoje filmy tutaj
+        ];
+
+        const gallery = document.getElementById('video-gallery');
+
+        videos.forEach(video => {
+            const videoItem = document.createElement('div');
+            videoItem.className = 'video-item';
+            
+            videoItem.innerHTML = `
+                <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank" class="video-link">
+                    <div class="video-wrapper">
+                        <img 
+                            src="https://img.youtube.com/vi/${video.id}/hqdefault.jpg" 
+                            alt="Miniatura filmu: ${video.title}"
+                        >
+                        <div class="play-overlay">▶</div>
+                    </div>
+                    <h3>${video.title}</h3>
+                </a>
+            `;
+            gallery.appendChild(videoItem);
+        });
+    </script>
+</body>
+</html>
